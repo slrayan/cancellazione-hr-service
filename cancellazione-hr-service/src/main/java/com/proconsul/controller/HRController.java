@@ -34,7 +34,7 @@ public class HRController {
 	public Map<String,Boolean> cancellazioneUserHR( @PathVariable String email, @PathVariable String password) throws InserimentoException{
 	
 			return hrService.cancellaUserHR(new UtenteHRId(email, password));
-		// delete
+		
 		
 	}
 	

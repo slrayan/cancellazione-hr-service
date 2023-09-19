@@ -14,11 +14,9 @@ import jakarta.validation.constraints.Size;
 public class DipendenteTecnologiaId implements Serializable{
 
 	@ManyToOne
-	@JoinColumn(nullable = false)
 	private Dipendente dipendente;
 	
 	@ManyToOne
-	@JoinColumn(nullable = false)
 	private Tecnologia tecnologia;
 
 	public Dipendente getDipendente() {
