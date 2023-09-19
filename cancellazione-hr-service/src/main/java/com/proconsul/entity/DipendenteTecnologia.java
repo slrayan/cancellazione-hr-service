@@ -24,9 +24,9 @@ public class DipendenteTecnologia implements Serializable {
 	@EmbeddedId
 	private DipendenteTecnologiaId dipendenteTecnologiaId;
 
-	@Column(nullable = false, length = 2)
-	@Size(min = 1, max = 2)
-	private int esperienza;
+	@Column(nullable = false)
+	@Size(min = 1)
+	private String esperienza;
 
 	@Column(nullable = false)
 	@Size(min = 1)
@@ -40,11 +40,11 @@ public class DipendenteTecnologia implements Serializable {
 		this.dipendenteTecnologiaId = dipendenteTecnologiaId;
 	}
 
-	public int getEsperienza() {
+	public String getEsperienza() {
 		return esperienza;
 	}
 
-	public void setEsperienza(int esperienza) {
+	public void setEsperienza(String esperienza) {
 		this.esperienza = esperienza;
 	}
 
@@ -56,7 +56,7 @@ public class DipendenteTecnologia implements Serializable {
 		this.competenza = competenza;
 	}
 	
-	public DipendenteTecnologia(DipendenteTecnologiaId dipendenteTecnologiaId, @Size(min = 1, max = 2) int esperienza,
+	public DipendenteTecnologia(DipendenteTecnologiaId dipendenteTecnologiaId, @Size(min = 1) String esperienza,
 			@Size(min = 1) String competenza) {
 		super();
 		this.dipendenteTecnologiaId = dipendenteTecnologiaId;
