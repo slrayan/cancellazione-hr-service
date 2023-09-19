@@ -3,22 +3,17 @@ package com.proconsul.entity;
 import java.io.Serializable;
 import java.util.Objects;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
-import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.validation.constraints.Size;
 
 @Embeddable
 @SuppressWarnings("serial")
 public class DipendenteTecnologiaId implements Serializable{
 
 	@ManyToOne
-	@JoinColumn(nullable = false)
 	private Dipendente dipendente;
 	
 	@ManyToOne
-	@JoinColumn(nullable = false)
 	private Tecnologia tecnologia;
 
 	public Dipendente getDipendente() {
